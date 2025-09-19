@@ -41,6 +41,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+val secondModifier = Modifier.height(100.dp)
+
 @Composable
 fun DemoScreen(modifier: Modifier = Modifier) {
     val mymodifier = modifier
@@ -53,7 +56,7 @@ fun DemoScreen(modifier: Modifier = Modifier) {
     ) {
         Text(
             "Hello Compose",
-            mymodifier,
+            mymodifier.then(secondModifier),
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold
         )
